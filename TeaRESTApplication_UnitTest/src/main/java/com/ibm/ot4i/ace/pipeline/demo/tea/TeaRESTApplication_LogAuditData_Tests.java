@@ -89,7 +89,7 @@ public class TeaRESTApplication_LogAuditData_Tests {
 
             // Make sure the JSON still exists
             //assertEquals(123, actualMessageAssembly.messagePath("JSON.Data.id").getLongValue());
-            assertEquals("Earl Grey", actualMessageAssembly.messagePath("JSON.Data.name").getStringValue());
+            assertEquals("Earl-Grey", actualMessageAssembly.messagePath("JSON.Data.name").getStringValue());
             // And that XMLNSC does not
             Exception exception = assertThrows(TestException.class, () -> {
             	actualMessageAssembly.messagePath("XMLNSC.logData.info.name").getValueAsString();
